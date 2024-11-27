@@ -3,10 +3,6 @@ from transformers import pipeline
 import os
 import whisper
 
-# os.environ["OPENAI_API_KEY"] = "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"
-
-# ssl._create_default_https_context = ssl._create_unverified_context
-
 def download_audio(video_url, output_path="downloads"):
     if not os.path.exists(output_path):
         os.makedirs(output_path)
