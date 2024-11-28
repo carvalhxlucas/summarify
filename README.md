@@ -1,5 +1,5 @@
 
-# 🎥 YouTube Audio Summarizer  
+# 🎥 Summarify  
 
 This project downloads the audio from YouTube videos, transcribes the content using the **Whisper** model, and generates a summary of the transcribed text using **Transformers** with the `facebook/bart-large-cnn` model.  
 
@@ -28,7 +28,7 @@ pip install pytube whisper transformers torch
 ## 📂 Project Structure  
 
 ```  
-📦 YouTube Audio Summarizer  
+📦 Summarify  
  ┣ 📂 downloads  
  ┃ ┗ 📜 (Downloaded audio files will be saved here)  
  ┣ 📜 main.py  
@@ -39,8 +39,8 @@ pip install pytube whisper transformers torch
 
 1. Clone the repository:  
    ```bash  
-   git clone https://github.com/yourusername/YouTube-Audio-Summarizer.git  
-   cd YouTube-Audio-Summarizer  
+   git clone https://github.com/carvalhxlucas/summarify.git  
+   cd Summarify  
    ```  
 
 2. Install dependencies:  
@@ -63,11 +63,8 @@ pip install pytube whisper transformers torch
   - Modify the `output_path` value in the `download_audio` function.  
 
 - Adjust the summary length:  
-  - Update the `max_length` and `min_length` parameters in the `summarize_text_with_transformers` function.  
+  - Update the `max_length` and `min_length` parameters in the `summarize_text` function.  
 
-## 📜 License  
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.  
 
 ---
 
