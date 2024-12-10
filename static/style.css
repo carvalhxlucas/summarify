@@ -1,0 +1,62 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Coloca os elementos em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: flex-start; /* Alinha ao topo */
+    height: 100vh;
+    text-align: center;
+}
+
+/* Título do site */
+h1 {
+    font-size: 3rem; /* Tamanho maior da fonte */
+    color: #FF0000; /* Azul vibrante */
+    margin: 40px 0 20px; /* Espaçamento acima e abaixo */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column; /* Elementos em coluna */
+    align-items: center; /* Centraliza os elementos no formulário */
+    gap: 15px; /* Espaço entre os elementos */
+}
+
+/* Campo de entrada do link */
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px; /* Cantos arredondados */
+    font-size: 1rem;
+    outline: none;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #4a90e2;
+}
+
+/* Botão */
+button {
+    width: 150px;
+    padding: 10px;
+    background-color: #FF0000;
+    color: white;
+    border: none;
+    border-radius: 25px; /* Cantos arredondados */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #357ab8; /* Cor mais escura ao passar o mouse */
+}
