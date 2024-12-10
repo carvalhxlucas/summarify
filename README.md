@@ -1,71 +1,81 @@
+# 🎥 Summarify
 
-# 🎥 Summarify  
+This project is a web-based tool that downloads the audio from YouTube videos, transcribes the content using the **Whisper** model, and generates a summary of the transcribed text using **Transformers** with the `facebook/bart-large-cnn` model.
 
-This project downloads the audio from YouTube videos, transcribes the content using the **Whisper** model, and generates a summary of the transcribed text using **Transformers** with the `facebook/bart-large-cnn` model.  
+## 🚀 Features
 
-## 🚀 Features  
+- **Web Interface**: A simple and intuitive interface for users to input a YouTube video URL and view the results directly in their browser.
+- **Audio Download**: Extracts only the audio from a YouTube video.
+- **Transcription**: Converts the audio to text using the Whisper model.
+- **Summarization**: Produces a concise summary of the transcription using Transformers.
 
-- **Audio Download**: Extracts only the audio from a YouTube video.  
-- **Transcription**: Converts the audio to text using the Whisper model.  
-- **Summarization**: Produces a concise summary of the transcription using Transformers.  
+## 🔧 Technologies Used
 
-## 🛠️ Technologies Used  
+- [Python](https://www.python.org/)
+- [Flask](https://flask.palletsprojects.com/) - For building the web interface.
+- [Pytube](https://pytube.io/) - For downloading audio from YouTube.
+- [Whisper](https://github.com/openai/whisper) - For audio transcription.
+- [Transformers](https://huggingface.co/transformers/) - For text summarization.
+- [Hugging Face Model](https://huggingface.co/facebook/bart-large-cnn) - The `facebook/bart-large-cnn` model for summarization.
 
-- [Python](https://www.python.org/)  
-- [Pytube](https://pytube.io/) - For downloading audio from YouTube.  
-- [Whisper](https://github.com/openai/whisper) - For audio transcription.  
-- [Transformers](https://huggingface.co/transformers/) - For text summarization.  
-- [Hugging Face Model](https://huggingface.co/facebook/bart-large-cnn) - The `facebook/bart-large-cnn` model for summarization.  
+## 🗒 Prerequisites
 
-## 📝 Prerequisites  
+Ensure **Python 3.8 or higher** is installed and install the required libraries:
 
-Ensure **Python 3.8 or higher** is installed and install the required libraries:  
+```bash
+pip install flask pytube whisper transformers torch
+```
 
-```bash  
-pip install pytube whisper transformers torch  
-```  
+## 📂 Project Structure
 
-## 📂 Project Structure  
+```
+📆 Summarify
+ ├── 🗂 downloads
+ │   └── (Downloaded audio files will be saved here)
+ ├── 🗂 templates
+ │   └── index.html
+ ├── 🗂 static
+ │   └── styles.css
+ ├── app.py
+ ├── requirements.txt
+ └── README.md
+```
 
-```  
-📦 Summarify  
- ┣ 📂 downloads  
- ┃ ┗ 📜 (Downloaded audio files will be saved here)  
- ┣ 📜 main.py  
- ┗ 📜 README.md  
-```  
+## ▶️ How to Run
 
-## ▶️ How to Run  
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/carvalhxlucas/summarify.git
+   cd Summarify
+   ```
 
-1. Clone the repository:  
-   ```bash  
-   git clone https://github.com/carvalhxlucas/summarify.git  
-   cd Summarify  
-   ```  
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-2. Install dependencies:  
-   ```bash  
-   pip install -r requirements.txt  
-   ```  
+3. Run the Flask app:
+   ```bash
+   python app.py
+   ```
 
-3. Run the script:  
-   ```bash  
-   python main.py  
-   ```  
+4. Open your web browser and go to `http://127.0.0.1:5000`.
 
-4. Enter the YouTube video URL when prompted.  
+5. Enter the YouTube video URL in the input field and click "Submit" to get the summary.
 
-5. The summary will be displayed in the terminal!  
+## 🔧 Customizations
 
-## 🔧 Customizations  
+- **Change the Output Directory**:
+  - Modify the `DOWNLOAD_FOLDER` variable in `app.py` to set a different path for downloaded audio files.
 
-- Change the output directory for downloaded audio files:  
-  - Modify the `output_path` value in the `download_audio` function.  
+- **Adjust the Summary Length**:
+  - Update the `max_length` and `min_length` parameters in the `summarize_text` function in `app.py`.
 
-- Adjust the summary length:  
-  - Update the `max_length` and `min_length` parameters in the `summarize_text` function.  
+## 🔧 Adding Styles
 
+- The web interface styling is handled by `static/styles.css`. Feel free to update this file to customize the appearance of the page.
 
 ---
 
 Ready to collaborate or improve this project? Have questions? Let me know! 😊
+
